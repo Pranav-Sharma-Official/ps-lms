@@ -1335,9 +1335,9 @@ Please keep changes focused and well-described.
 | Platform | Link |
 |---|---|
 | GitHub | [GitHub Link](https://github.com/Pranav-Sharma-Official) |
-| LinkedIn | `[Let's Connect](https://www.linkedin.com/in/-pranav--sharma-/)` |
-| Portfolio | `[Portfolio Link](https://pranav-sharma.dev/)` |
-| Docker Image | `[Docker Image Link](https://hub.docker.com/r/pranavsharmaofficial/ps-lms)` |
+| LinkedIn | [Let's Connect](https://www.linkedin.com/in/-pranav--sharma-/) |
+| Portfolio | [Portfolio Link](https://pranav-sharma.dev/) |
+| Docker Image | [Docker Image Link](https://hub.docker.com/r/pranavsharmaofficial/ps-lms) |
 
 ---
 
