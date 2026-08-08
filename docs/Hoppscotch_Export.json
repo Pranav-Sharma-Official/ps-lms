@@ -1,0 +1,1292 @@
+{
+  "v": 12,
+  "name": "LMS",
+  "folders": [
+    {
+      "v": 12,
+      "name": "Genre",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "create genre",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/genres/create",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"code\": \"PROGRAMMING\",\n  \"name\": \"Programming\",\n  \"description\": \"Suspense & investigation stories\",\n  \"displayOrder\": 1,\n  \"active\": true,\n  \"parentGenreId\": 1\n\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "get all genre",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/genres",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "get top level genre",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/genres/top-level",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "update genre",
+          "method": "PUT",
+          "endpoint": "http://localhost:5000/api/genres/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"id\": 1,\n  \"code\": \"NON-FICTION\",\n  \"name\": \"Non-Fiction\",\n  \"description\": \"Genre that includes imaginative or invented stories, often exploring characters, plots, and themes not based on real events.\",\n  \"displayOrder\": 1,\n  \"active\": true,\n  \"parentGenreId\": null,\n  \"parentGenreName\": null,\n  \"subGenre\": null,\n  \"bookCount\": null,\n  \"createdAt\": \"2026-06-15T09:38:08.353617\",\n  \"updatedAt\": \"2026-06-15T09:38:08.353617\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "get genre by id",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/genres/2",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "delete - soft",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/genres/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "delete - hard",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/genres/2/hard",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Book Service",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "create book",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/books",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \n  \"isbn\": \"978-3-16-148410-1\",\n  \"title\": \"The Art of Java Development 2\",\n  \"author\": \"Ashok Zarmariya\",\n  \"genreId\": 3,\n  \"publisher\": \"PS Publications\",\n  \"publishDate\": \"2026-06-15\",\n  \"language\": \"English\",\n  \"pages\": 420,\n  \"description\": \"A comprehensive guide to mastering Java programming, covering modern practices, frameworks, and real-world applications.\",\n  \"totalCopies\": 50,\n  \"availableCopies\": 30,\n  \"price\": 499.99,\n  \"coverImageUrl\": \"https://images.pexels.com/photos/4058794/pexels-photo-4058794.jpeg\",\n  \"active\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "get all books",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/books",
+          "params": [
+            {
+              "key": "genreId",
+              "value": "2",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "update book",
+          "method": "PUT",
+          "endpoint": "http://localhost:5000/api/books/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \n  \"title\": \"The Art of Python Development\",\n  \"author\": \"Ashok Zarmariya\",\n  \"genreId\": 1,\n  \"genreName\": \"Non-Fiction\",\n  \"genreCode\": \"NON-FICTION\",\n  \"publisher\": \"PS Publications\",\n  \"publishDate\": \"2026-06-15\",\n  \"language\": \"English\",\n  \"pages\": 420,\n  \"description\": \"A comprehensive guide to mastering Java programming, covering modern practices, frameworks, and real-world applications.\",\n  \"totalCopies\": 50,\n  \"availableCopies\": 30,\n  \"price\": 499.99,\n  \"coverImageUrl\": \"https://images.pexels.com/photos/4058794/pexels-photo-4058794.jpeg\",\n  \"alreadyHaveLoan\": null,\n  \"alreadyHaveReservation\": null,\n  \"active\": true,\n  \"createdAt\": \"2026-06-15T11:06:43.307311\",\n  \"updatedAt\": \"2026-06-15T11:06:43.307311\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "get book by id",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/books/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "soft delete",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/books/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "hard delete",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/books/1/permanent",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "book stats",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "User Service",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Signup",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/auth/signup",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"fullName\": \"Pranav Sharma\",\n  \"email\":\"job.pranav.sharma@gmail.com\",\n  \"password\": \"12345678\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Login Admin",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/auth/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"email\": \"pranav.bgr@gmail.com\",\n  \"password\":\"password\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Forgot Password",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/auth/forgot-password",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"email\": \"job.pranav.sharma@gmail.com\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Reset Password",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/auth/reset-password",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"token\": \"7d8335b2-89c6-463b-aae0-0cedb27e0762\",\n  \"password\": \"87654321\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Login User",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Fetch Profile",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/users/profile",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE3ODU0ODMsImV4cCI6MTc4MTg3MTg4MywiZW1haWwiOiJwcmFuYXYuYmdyQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiJ9.i8ptdkbcV2FGtDuwKBHJHhC9_Sot9q44FwBKn_ZN_HjMM3LVFC713cymfgCvg2wGSLJQlRLm4DVyM78ewiHw2g",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Subscription Plan",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Get All Plans",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Plan",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/subscription-plans/admin/create",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE3ODU0ODMsImV4cCI6MTc4MTg3MTg4MywiZW1haWwiOiJwcmFuYXYuYmdyQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiJ9.i8ptdkbcV2FGtDuwKBHJHhC9_Sot9q44FwBKn_ZN_HjMM3LVFC713cymfgCvg2wGSLJQlRLm4DVyM78ewiHw2g",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n    \"planCode\": \"BASIC_30\",\n    \"name\": \"Basic 30 Days Plan\",\n    \"description\": \"Access to basic features with limited book usage\",\n    \"durationDays\": 30,\n    \"price\": 499,\n    \"currency\": \"INR\",\n    \"maxBooksAllowed\": 5,\n    \"maxDaysPerBook\": 7,\n    \"displayOrder\": 1,\n    \"isActive\": true,\n    \"isFeatured\": false,\n    \"badgeText\": \"Popular\",\n    \"adminNotes\": \"Entry-level subscription plan\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Plan",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/subscription-plans/admin/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE3ODU0ODMsImV4cCI6MTc4MTg3MTg4MywiZW1haWwiOiJwcmFuYXYuYmdyQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiJ9.i8ptdkbcV2FGtDuwKBHJHhC9_Sot9q44FwBKn_ZN_HjMM3LVFC713cymfgCvg2wGSLJQlRLm4DVyM78ewiHw2g",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Plan",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Subscription",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Get Active Subscription Users",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/subscriptions/user/active",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE4NjM3OTIsImV4cCI6MTc4MTk1MDE5MiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.8pU240Ma5yk_qcKlJ811IhZkaT4iytiF9oYCSzEUQg8_6MuEVtE9YREtew_dwjU8d6gso0WZQzhVuFn3HkRaiA",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Subscribe",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/subscriptions/subscribe",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE4NjMyMTQsImV4cCI6MTc4MTk0OTYxNCwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.ob5Vj0j1Q5-2EZEViqq7AgI0csnM60KzTLbBdp38wXcg3zUGoBDe-ZMVPp0kiFi6pYogu2UOlwFyfKCnaDpa3g",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"planId\": \"2\",\n  \"startDate\": \"2026-06-19\",\n  \"autoRenew\": true,\n  \"notes\": \"Second-time subscription\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Subscriptions",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/subscriptions/admin",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE4NjM3OTIsImV4cCI6MTc4MTk1MDE5MiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.8pU240Ma5yk_qcKlJ811IhZkaT4iytiF9oYCSzEUQg8_6MuEVtE9YREtew_dwjU8d6gso0WZQzhVuFn3HkRaiA",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Activate Subscription",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/subscriptions/activate",
+          "params": [
+            {
+              "key": "subscriptionId",
+              "value": "2",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "paymentId",
+              "value": "1",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE4NjM3OTIsImV4cCI6MTc4MTk1MDE5MiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.8pU240Ma5yk_qcKlJ811IhZkaT4iytiF9oYCSzEUQg8_6MuEVtE9YREtew_dwjU8d6gso0WZQzhVuFn3HkRaiA",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Cancel Subscription",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/subscriptions/cancel/2",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODE4NjM3OTIsImV4cCI6MTc4MTk1MDE5MiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.8pU240Ma5yk_qcKlJ811IhZkaT4iytiF9oYCSzEUQg8_6MuEVtE9YREtew_dwjU8d6gso0WZQzhVuFn3HkRaiA",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Payment",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Get All Payments",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Book Loan",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "My Book Loan History",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Search Book Loans",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/book-loans/search",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Book Loan",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Active Checkouts",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/book-loans/my",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Return Book Loan",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Fine",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Fine",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/fines",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"bookLoanId\": 1,\n  \"type\": \"DAMAGE\",\n  \"amount\": 500,\n  \"reason\": \"Book is damaged.\",\n  \"notes\": \"Book pages are in very bad condition.\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get My Fines",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/fines/my",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Fines",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/fines",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Fine Waive",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/fines/waive",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIwMTY0MDIsImV4cCI6MTc4MjEwMjgwMiwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.U1zBYjZJHJ7C6yT068bDGeM27I-3GVfYdvm9_7iMMUq5W_EkAYhIQSsnmsGjgnPKc2Md_uBCMLVBd6rPS_MzXw",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"fineId\": 2,\n  \"reason\": \"Student damaged the book by mistake and has an active subscriptiomm from last 2 years.\"  \n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Pay Fine",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Reservation",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Reservation",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/reservations",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"bookId\": 3,\n  \"notes\": \"Book not available, so I need to make a reservation!\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Reservations",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/reservations",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "My Reservations",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/reservations/my",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Cancel Reservations",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/reservations/1",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Wishlist",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Wishlist",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/wishlist/add/3",
+          "params": [
+            {
+              "key": "notes",
+              "value": "This is my favourite book!",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "My Wishlist",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/wishlist/my",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Remove Wishlist",
+          "method": "DELETE",
+          "endpoint": "http://localhost:5000/api/wishlist/remove/3",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMTQ3MTMsImV4cCI6MTc4MjIwMTExMywiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.UhRZXoa1r9sF0_sugZJyBpWpdk8rAvFzdwQlKRkKlspuK9vHv1YDiw5U9eb0n14FcSJ1Da3hbOdMGtisiL-Qsg",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "name": "Book Review",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Book Review",
+          "method": "POST",
+          "endpoint": "http://localhost:5000/api/reviews",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMzc4MTgsImV4cCI6MTc4MjIyNDIxOCwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.YMOCr4gXsM8YOGIGY8CmQUA-qP__qqzzr523e7Hr6XfWK_ciuGn5oH594u_dKnXtcgHUSjj6hS6SD_eIS5ZK9A",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"bookId\": 3,\n  \"rating\": 4,\n  \"reviewText\": \"Great book, just loved reading it!\",\n  \"title\": \"Very informative!\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Book Reviews",
+          "method": "GET",
+          "endpoint": "http://localhost:5000/api/reviews/book/3",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODIxMzc4MTgsImV4cCI6MTc4MjIyNDIxOCwiZW1haWwiOiJqb2IucHJhbmF2LnNoYXJtYUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IlJPTEVfVVNFUiJ9.YMOCr4gXsM8YOGIGY8CmQUA-qP__qqzzr523e7Hr6XfWK_ciuGn5oH594u_dKnXtcgHUSjj6hS6SD_eIS5ZK9A",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Book Review",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": "",
+  "preRequestScript": "",
+  "testScript": ""
+}
