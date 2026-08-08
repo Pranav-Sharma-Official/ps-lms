@@ -16,6 +16,12 @@
 
 ---
 
+<p align="center">
+  <img src="images/banner.png" alt="PS Library Banner Placeholder" />
+</p>
+
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
