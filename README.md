@@ -1328,6 +1328,14 @@ Please keep changes focused and well-described.
 
 ---
 
+## 📚 Documentation
+
+- [Technical Documentation](docs/PS_Library_Documentation.md)
+- [Hoppscotch Collection](docs/Hoppscotch_Export.json)
+- [Docker Hub Image](https://hub.docker.com/r/pranavsharmaofficial/ps-lms)
+
+---
+
 ## Author
 
 **Pranav Sharma**
@@ -1337,7 +1345,6 @@ Please keep changes focused and well-described.
 | GitHub | [GitHub Link](https://github.com/Pranav-Sharma-Official) |
 | LinkedIn | [Let's Connect](https://www.linkedin.com/in/-pranav--sharma-/) |
 | Portfolio | [Portfolio Link](https://pranav-sharma.dev/) |
-| Docker Image | [Docker Image Link](https://hub.docker.com/r/pranavsharmaofficial/ps-lms) |
 
 ---
 
